@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    {{>navbar}}
+    <div class="main__header">
+        <div id="weather" class="weather">
+          <div class="weather__content">
+                   <form action="" class="weather__form">
+                     <input type="text" id="cityName" placeholder="enter your city name">  
+                     <input type="submit" name="" id="submitBtn" value="search">
+                   </form>
+               </div>
+
+     <div class="weather_card">
+            <div class="weather__info">
+                  <div class="d-flex p-4 justify-content-center fs-4 gap-4 date-time">
+            <div class="time">
+                <span class="hour"></span> :
+                <span class="minute"></span>
+                <span class="period"></span>
+            </div>
+            <div class="day-month">
+                <span class="pe-2 day"></span>
+                <span class="month"></span>
+            </div>
+        </div>
+               </div>
+            
+
+            <div class="main__layer">
+                <div class="d-flex  align-items-center weather-city-and-icon">
+                <p class="fs-1 bg-white py-1 px-4" id="city_name">Output Here</p>
+                <img alt="" id="weather_icon">
+                </div>
+                <div class="middle__layer">
+                    <p><span id="temp"></span>&#8451;</p>
+                    <p id="temp__status"></p>
+                </div>
+            </div>
+         </div>
+        </div>
+    </div>
+    {{>footer}}
+     <script src="js/main.js"></script>
+</body>
+</html>
